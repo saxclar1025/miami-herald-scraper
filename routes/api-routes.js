@@ -10,14 +10,17 @@ module.exports = app => {
       var articles = [];
 
       $("article").each((i, element)=>{
+        console.log($(this).find(".title a").text());
+        console.log($(this).find("p").text());
+        console.log($(this).find(".title a").attr("href"));
         articles.push({
-          title: $(this).children(".title a").text(),
-          summary: $(this).children("p").text(),
-          url: $(this).children(".title a").attr("href")
+          title: $(this).find(".title a").text(),
+          summary: $(this).find("p").text(),
+          url: $(this).find(".title a").attr("href")
         });
       });
-    });
 
-    res.json(articles);
+      res.json(articles);
+    });
   });
 }

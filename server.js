@@ -6,6 +6,7 @@ var app = express();
 const PORT = process.env.PORT || 8080;
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static("public"));
 
 require("./routes")(app);
 
