@@ -16,9 +16,16 @@ var ArticleSchema = new mongoose.Schema({
     required: true
   },
 
+  articleID: {
+    type: Number,
+    required: true,
+    index: true,
+    unique: true
+  },
+
   comments: [
     {
-      type: Schema.types.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "Comment"
     }
   ]
