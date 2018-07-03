@@ -17,7 +17,7 @@ var ArticleSchema = new mongoose.Schema({
   },
 
   articleID: {
-    type: Number,
+    type: String,
     required: true,
     index: true,
     unique: true

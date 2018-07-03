@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+  <a class="navbar-brand" href="index.html"><img src="https://www.miamiherald.com/static/images/miamiherald/logo-lg.png"> <i>Scraper</i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item {{#if home}}active{{/if}}">
+        <a class="nav-link" href="index">Home</a>
+      </li>
+      <li class="nav-item {{#unless home}}active{{/unless}}">
+        <a class="nav-link" href="saved">Saved Articles</a>
+      </li>
+    </ul>
+    <button id="scrape-button" class="btn btn-success">Scrape New Articles</button>
+    <button id="clear-button" class="btn btn-danger">Clear Articles</button>
+  </div>
+</nav>
